@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="vm">
+        <span >{{ msg }}</span>
+        <span v-html="msg"></span>
+        <button v-bind:disabled="isButtonDisabled">click me</button>
+        <button v-if="isable" v-bind:id="isButtonId">click me s</button>
+        <div>
+            <p v-if="isAble">{{ pMessage }}</p>
+            <button v-on:click="changeIsAble"> changeIsAble</button>
+
+        </div>
+
+
+        <button v-on:click="changeText">{{ msg }}</button>
+
+        <div>
+            <p >{{ Cdft }}</p>
+            <p >{{ Mdft() }}</p>
+            <button v-on:click="Cdft">computed different</button>
+            <button v-on:click="Mdft()">methods different</button>
+        </div>
+
+    </div>
+    <script src="../../lib/vue.js"></script>
+    <script src="./js/5_29.js"></script>
+</body>
+</html>

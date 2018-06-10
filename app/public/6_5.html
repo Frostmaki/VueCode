@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../../lib/vue.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <template v-if="loginType === 'userName'">
+        <label>Username</label>
+        <input placeholder="Enter your username">
+    </template>
+    <template v-else>
+        <label>Email</label>
+        <input placeholder="Enter your email address">
+    </template>
+    <div>
+        <lable>password:</lable>
+        <input placeholder="enterpress your password">
+    </div>
+    <button v-on:click="translate()">click</button>
+    <P>
+        Now you see me
+    </p>
+    <p >
+        {{ message }}
+    </p>
+
+</div>
+
+<script src="js/6_5.js"></script>
+</body>
+</html>

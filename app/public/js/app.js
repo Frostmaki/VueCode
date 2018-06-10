@@ -36,7 +36,8 @@ var app=new Vue({
         onOut:function () {
             console.log('mouse Leave');
         },
-        onSubmit:function () {
+        onSubmit:function (e) {
+            e.preventDefault();
             console.log('submited');
         }
 

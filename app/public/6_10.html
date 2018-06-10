@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{ message }}
+    {{ foodList }}
+    <ul >
+        <li v-for="food in foodList">{{ food }}</li>
+    </ul>
+    <ul >
+        <li v-for="item in object">{{ item }}</li>
+    </ul>
+</div>
+<script src="../../lib/vue.js"></script>
+<script src="js/6_10.js"></script>
+</body>
+</html>
