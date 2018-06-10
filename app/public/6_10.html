@@ -6,16 +6,34 @@
 </head>
 <body>
 <div id="app">
-    {{ message }}
-    {{ foodList }}
+	<input v-model="message">
+    <div>message:  {{ message }}</div>
+  
+    
     <ul >
-        <li v-for="food in foodList">{{ food }}</li>
+        <li v-for="(value,key,index) in object">{{ index }}:{{key}}-{{value}}</li>
     </ul>
-    <ul >
-        <li v-for="item in object">{{ item }}</li>
-    </ul>
+
+	<p>count:{{count}}</P>
+	<button v-on:click="count +=1">add 1</button>
+	
+	<!--加不加括号？？？？-->
+	<div><button v-on:click="greet2">click1</button></div>
+	<div><button v-on:click="greet2($event)">click2</button></div>
+
+	<div><button onclick="alert(event.target.tagName)">test eventk</button></div>
+
+	<div><button v-on:click="parameterPassing('say hi')">传参</button></div>
+	
 </div>
+
+<div id="component-demo">
+	<button-counter></button-counter>
+</div>
+</div>
+
 <script src="../../lib/vue.js"></script>
 <script src="js/6_10.js"></script>
+
 </body>
 </html>
